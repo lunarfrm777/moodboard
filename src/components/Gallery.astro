@@ -1,7 +1,4 @@
 ---
-import type { ACTION_ERROR_CODES } from "astro:actions";
-
-// src/components/Gallery.astro
 const images = [
     "/gallery/1.png",
     "/gallery/2.jpeg",
@@ -68,7 +65,6 @@ const images = [
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 12px;
     }
     .gallery img {
         width: 100%;
