@@ -123,14 +123,15 @@ const images = [
     "/gallery/121.png",
     "/gallery/122.png",
 ];
+import Card from "./Card.astro";
 ---
 
 <!-- card component code from free frontend website -->
-<div class="card dark">
+<Card>
     <div class="gallery">
         {images.map((src) => <img src={src} loading="lazy" />)}
     </div>
-</div>
+</Card>
 
 <style>
     .gallery {
@@ -144,45 +145,5 @@ const images = [
         height: 100%;
         object-fit: cover; /* key for seamless fill */
         display: block;
-    }
-
-    body {
-        min-height: 100vh;
-        margin: 0;
-        aoverflow: hidden;
-        background: linear-gradient(#eee, #ddd);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .card {
-        --bg: #fff;
-        --title-color: #fff;
-        --title-color-hover: #000;
-        --text-color: #666;
-        --button-color: #eee;
-        --button-color-hover: #ddd;
-        background: var(--bg);
-        border-radius: 2rem;
-        padding: 0.5rem;
-        width: 20rem;
-        height: 30rem;
-        /*   aspect-ratio: 2 / 3;
-        height: auto; */
-        overflow: clip;
-        position: relative;
-        font-family: Lato, Montserrat, Helvetica, Arial, sans-serif;
-    }
-
-    &.dark {
-        --bg: #222;
-        --title-color: #fff;
-        --title-color-hover: #fff;
-        --text-color: #ccc;
-        --button-color: #555;
-        --button-color-hover: #444;
     }
 </style>
