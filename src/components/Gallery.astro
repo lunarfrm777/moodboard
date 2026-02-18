@@ -126,12 +126,18 @@ const images = [
 import Card from "./Card.astro";
 ---
 
-<!-- card component code from free frontend website -->
-<Card>
-    <div class="gallery">
-        {images.map((src) => <img src={src} loading="lazy" />)}
-    </div>
-</Card>
+<!-- this is the overall gallery of all images -->
+<div class="gallery">
+    <!-- mapping through images declared above -->
+    {
+        images.map((src) => (
+            // <!-- card component code from free frontend website -->
+            <Card>
+                <img src={src} loading="lazy" />
+            </Card>
+        ))
+    }
+</div>
 
 <style>
     .gallery {
